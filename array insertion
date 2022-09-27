@@ -1,0 +1,56 @@
+#include<stdio.h>
+main()
+{
+    int a[10],i,n;
+    printf("Enter the size of an array:");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++)
+    {
+        printf("Enter index %d element",i);
+        scanf("%d",&a[i]);
+    }
+
+    for(i=0;i<n;i++)
+    {
+        printf("\nelement at index %d is %d",i,a[i]);
+    }
+    printf("\n\n");
+    int pos,data;
+
+    printf("Enter the position you want to insert:");
+    scanf("%d",&pos);
+    printf("\n");
+    printf("Enter the data you want to insert:");
+    scanf("%d",&data);
+
+    for(i=n;i>=pos-1;i--)
+    {
+        a[i+1]=a[i];
+    }
+    a[pos]=data;
+    n++;
+    printf("\nupdated array :");
+    for(i=0;i<n;i++)
+    {
+        printf("\nelement at index %d = %d ",i,a[i]);
+    }
+
+}
+
+
+output:
+Enter the size of an array:3
+Enter index 0 elementlasya
+Enter index 1 elementEnter index 2 element
+element at index 0 is -1
+element at index 1 is -1
+element at index 2 is 47
+
+Enter the position you want to insert:
+Enter the data you want to insert:
+updated array :
+element at index 0 = 0
+element at index 1 = -1
+element at index 2 = -1
+element at index 3 = 47
